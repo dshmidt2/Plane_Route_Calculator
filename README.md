@@ -1,7 +1,7 @@
 # Plane Route Calculator Project
 
 
-By: Fang Yi Lin, Jerry Wang, Yuqi Wen, Demetri Shmidt
+By: Fang Yi Lin, Jerry Wang, Yuqi Wen, Dmytro Shmidt
 
 In this project, we set out to answer the question: for a specific plane with a restricted maximum range, what is the best (shortest) route the plane can take? Our project allows individual pilots flying smaller planes to efficiently calculate the shortest route they can take to their destination. Our project also more broadly allows pilots or airlines to calculate and visualize the shortest route available for any kind of plane and any route they may want to fly. We answered this question using Dijkstra’s algorithm and Xiaolin Wu’s line tracing algorithm. We also used BFS to ensure that our graphs were correct and that paths either existed or did not exist between edges.
 
@@ -14,13 +14,17 @@ In this project, we set out to answer the question: for a specific plane with a 
 
 make
 
+```
+
+```
+
 ./main
 
 ```
 
 The user is then prompted to choose the datasets to use. You will need to input the paths to three datasets: airports, routes, and planes. If you want to default to the standard Openflights datasets, press enter each time you are prompted.
 
-The program will output the airports and planes from the datasets you have chosen to airports.txt and planes.txt respectively in the same folder as main.cpp. You will be prompted to enter the names of your start airport, destination airport and plane in that order. Please make sure to include the “” when you are inputting the name of your plane.
+The program will output the airports and planes from the datasets you have chosen to airports.txt and planes.txt respectively in the same folder as main.cpp. You will be prompted to enter the names of your start airport, destination airport and plane in that order. Please make sure to include the “” when you are inputting the model of your plane.
 
 The shortest route for the given plane you should take is written to the terminal under the line: “here is the route you should take”.
 
@@ -34,6 +38,10 @@ To terminate the program at any point, please use `Ctrl-C`.
 ```
 
 make test
+
+```
+
+```
 
 ./test
 
