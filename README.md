@@ -28,6 +28,8 @@ The route will also be drawn on a flat world map. You may view this at route.png
 
 To terminate the program at any point, please use `Ctrl-C`.
 
+![PNG Image for a Shortest Route Flight from Miami International Airport to Milano Linate Airport](miami_milan_boeing737_flight.png)
+
 
 # How to run the tests
 
