@@ -1,9 +1,77 @@
-# Plane Route Calculator Project Report
+# Plane Route Calculator Project
 
 
 By: Fang Yi Lin, Jerry Wang, Yuqi Wen, Demetri Shmidt
 
 In this project, we set out to answer the question: for a specific plane with a restricted maximum range, what is the best (shortest) route the plane can take? Our project allows individual pilots flying smaller planes to efficiently calculate the shortest route they can take to their destination. Our project also more broadly allows pilots or airlines to calculate and visualize the shortest route available for any kind of plane and any route they may want to fly. We answered this question using Dijkstra’s algorithm and Xiaolin Wu’s line tracing algorithm. We also used BFS to ensure that our graphs were correct and that paths either existed or did not exist between edges.
+
+
+
+
+# How to run the program
+
+```
+
+make
+
+./main
+
+```
+
+The user is then prompted to choose the datasets to use. You will need to input the paths to three datasets: airports, routes, and planes. If you want to default to the standard Openflights datasets, press enter each time you are prompted.
+
+The program will output the airports and planes from the datasets you have chosen to airports.txt and planes.txt respectively in the same folder as main.cpp. You will be prompted to enter the names of your start airport, destination airport and plane in that order. Please make sure to include the “” when you are inputting the name of your plane.
+
+The shortest route for the given plane you should take is written to the terminal under the line: “here is the route you should take”.
+
+The route will also be drawn on a flat world map. You may view this at route.png in the same folder as main.cpp.
+
+To terminate the program at any point, please use `Ctrl-C`.
+
+
+# How to run the tests
+
+```
+
+make test
+
+./test
+
+```
+
+Our tests test the functionality of:
+
+
+
+1. Parsers and Parsing all datasets (smaller custom datasets with invalid or malformed entries were included)
+2. Constructing the Airport, Plane, and RouteMaker classes
+3. Setters and getters for the abovementioned classes
+4. Constructing a graph
+5. Dijkstra’s algorithm with edge weight restrictions
+6. BFS
+
+
+# Github Organization
+
+In the main branch you will be able to find the following:
+
+**data/datasets:** contains the Openflights datasets we have used as well as some custom smaller datasets that we used for testing.
+
+**documents:** development log, project proposal, our team contract, results.md which is our final report.
+
+**tests:** all the unit and integrated tests that we have written. 
+
+**Airport.cpp/h:** Airport class to be used in data parsing and RouteMaker.cpp. You may find a brief description of each function in the .cpp and .h file.
+
+**Plane.cpp/h:** Plane class to be used in data parsing and RouteMaker.cpp. You may find a brief description of each function in the .cpp and .h file.
+
+**RouteMaker.cpp/h:** the main logic of our code, containing all the graph algorithms and the graph representation. You may find a brief description of each function in the .cpp and .h file.
+
+**line_drawing.cpp/h:** contains a modified Xiaolin Wu’s line tracing algorithm for our use. You may find a brief description of each function in the .cpp and .h file.
+
+**Main.cpp:** the code that runs with the user input commands that are below mentioned.
+
+**parser.cpp/h:** the code for parsing the data that is used to build Airport, Plane and RouteMaker. You may find a brief description of each function in the .cpp and .h file.
 
 
 # Output and Correctness of each algorithm
@@ -48,14 +116,3 @@ The drawLine function is a modified version of Xiaolin Wu’s Line Generation Al
  
 
 Some visual tests were carried out to determine whether the routes are drawn correctly. For example, the positions of the airports on the output png are compared with their actual position in Google map. In addition, we tested routes with various lengths and stopovers using aircrafts with different ranges. 
-
-
-# Conclusion
-
-We answered the above leading questions by asking what algorithm we could use to find the shortest path, and how we could include a restriction into that algorithm to ensure that routes that exceeded the specified airplane’s maximum range were excluded from the calculation.
-
-We have found that Dijkstra’s with the range restriction we introduced has proven to be successful in calculating the shortest path (flight route) between two vertices (airports). It was interesting to discover how routes changed given the different maximum ranges of the airplanes. Overall, we managed to answer our leading questions and create an algorithm that can successfully help aircraft operators calculate their most efficient flight paths given any kind of aircraft.
-
-This project was inspired by the numerous avid pilots that own their own smaller aircraft, and this program is a way for them to discover the best route they can use to fly between two destinations if they are unable to fly directly due to the range of their aircraft. Fuel prices are rising and this is an efficient way for them to calculate the route that will enable them to travel the least.
-
-Overall, we answered our questions successfully and we are satisfied with the output of our program. It has successfully answered our leading question in full and also provided us interesting insights throughout the process.
