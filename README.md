@@ -26,9 +26,11 @@ The shortest route for the given plane you should take is written to the termina
 
 The route will also be drawn on a flat world map. You may view this at route.png in the same folder as main.cpp.
 
-To terminate the program at any point, please use `Ctrl-C`.
+Here is an example PNG image file that was produced for the shortest route from Miami International Airport to Milano Linate Airport on a Boeing 737:
 
 ![PNG Image for a Shortest Route Flight from Miami International Airport to Milano Linate Airport](miami_milan_boeing737_flight.png)
+
+To terminate the program at any point, please use `Ctrl-C`.
 
 
 # How to run the tests
