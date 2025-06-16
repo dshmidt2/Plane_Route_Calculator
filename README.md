@@ -14,10 +14,6 @@ In this project, we set out to answer the question: for a specific plane with a 
 
 make
 
-```
-
-```
-
 ./main
 
 ```
@@ -39,9 +35,6 @@ To terminate the program at any point, please use `Ctrl-C`.
 
 make test
 
-```
-
-```
 
 ./test
 
