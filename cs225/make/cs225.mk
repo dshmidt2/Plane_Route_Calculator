@@ -90,11 +90,9 @@ IS_EWS=$(shell hostname | grep "ews.illinois.edu")
 IS_CORRECT_CLANG=$(shell clang -v 2>&1 | grep "version 6")
 ifneq ($(strip $(IS_EWS)),)
 ifeq ($(strip $(IS_CORRECT_CLANG)),)
-CLANG_VERSION_MSG = $(error $(ccred) On EWS, please run 'module load llvm/6.0.1' first when running CS225 assignments. $(ccend))
 endif
 else
 ifneq ($(strip $(SKIP_EWS_CHECK)),True)
-CLANG_VERSION_MSG = $(warning $(ccyellow) Looks like you are not on EWS. Be sure to test on EWS before the deadline. $(ccend))
 endif
 endif
 
